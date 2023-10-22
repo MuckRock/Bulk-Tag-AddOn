@@ -10,10 +10,7 @@ class BulkTag(AddOn):
     def main(self):
         """The main add-on functionality goes here."""
         # fetch your add-on specific data
-        if not self.documents:
-            self.set_message("Please select at least one document.")
-            return
-            
+
         key = self.data.get("key").strip()
         value = self.data.get("value").strip()
     

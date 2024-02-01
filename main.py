@@ -2,9 +2,9 @@
 This Add-On allows users to add tags or key/value pairs in bulk.
 """
 
-from documentcloud.addon import AddOn
+from documentcloud.addon import SoftTimeOutAddOn
 
-class BulkTag(AddOn):
+class BulkTag(SoftTimeOutAddOn):
     """An example Add-On for DocumentCloud."""
 
     def main(self):

@@ -20,5 +20,4 @@ required:
 # Categories are what type of Add-On this is. Used to sort the Add-On in the Add-On menu. 
 categories: 
   - bulk
-# Acceptable categories are premium, ai, export, bulk, file,  monitor, statistical, and extraction. 
-# You can read more about DocumentCloud Add-On categories here: https://www.documentcloud.org/help/add-ons#types-of-add-ons
+version: 2

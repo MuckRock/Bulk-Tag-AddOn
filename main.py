@@ -2,7 +2,9 @@
 This Add-On allows users to add tags or key/value pairs in bulk.
 """
 
+import time
 from documentcloud.addon import SoftTimeOutAddOn
+
 
 class BulkTag(SoftTimeOutAddOn):
     """An example Add-On for DocumentCloud."""
@@ -13,7 +15,7 @@ class BulkTag(SoftTimeOutAddOn):
 
         key = self.data.get("key").strip()
         value = self.data.get("value").strip()
-    
+
         for document in self.get_documents():
             if key in document.data:
                 document.data[key].append(value)
@@ -21,6 +23,7 @@ class BulkTag(SoftTimeOutAddOn):
             else:
                 document.data[key] = value
                 document.save()
+            time.sleep(5)
 
 
 if __name__ == "__main__":

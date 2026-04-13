@@ -12,7 +12,7 @@ class BulkTag(SoftTimeOutAddOn):
     def main(self):
         """The main add-on functionality goes here."""
         # fetch your add-on specific data
-
+        self.client.session.headers.update({'User-Agent': 'Bulk Tag Add-On'})
         key = self.data.get("key").strip()
         value = self.data.get("value").strip()
 
